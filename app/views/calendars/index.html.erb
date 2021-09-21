@@ -14,13 +14,16 @@
         <div class='date'>
           <% day[:month] %>/<% day[:date] %>
         </div>
-        <ul class='content'>
+        <%# <ul class='content'> %>
+        <li class='content'>
         <% if day[:plans].length != 0 %>
           <% day[:plans].each do |plan| %>
-            <li class='plan-list'>・<%= plan %></li>
+            <%# <li class='plan-list'>・<%= plan %></li> %>
+            <ul class='plan-list'>・<%= plan %></ul>
           <% end %>
         <% end %>
-        </ul>
+        <%# </ul> %>
+        </li>
       </div>
     <% end %>
   </div>
